@@ -1,0 +1,16 @@
+
+                    $table->timestamps();
+                });
+
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+            Schema::drop('profiles');
+	}
+}

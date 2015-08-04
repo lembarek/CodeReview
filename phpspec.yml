@@ -1,0 +1,6 @@
+suites:
+    lem_suite:
+        namespace: Lem
+        psr4_prefix: Lem
+        src_path: app/Lem
+        spec_path: app

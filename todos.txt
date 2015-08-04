@@ -1,0 +1,1 @@
+the right place to put the good that change the langep ///	Lang::setlocale(Session::get('locale'));
