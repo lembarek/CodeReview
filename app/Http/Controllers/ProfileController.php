@@ -26,8 +26,4 @@ class ProfileController extends Controller {
                     }
 	}
 
-        public function storeColumn(EnumRequest $enumRequest)
-        {
-            dd(Input::get());
-        }
 }
