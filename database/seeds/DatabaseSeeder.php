@@ -3,22 +3,44 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-include('ColumnsTableSeeder.php');
-include('UsersTableSeeder.php');
 
 class DatabaseSeeder extends Seeder {
 
-	/**
-	 * Run the database seeds.
-	 *
-	 * @return void
-	 */
+        protected $tables = [
+        'users',
+        'variables',
+        'user_variables',
+        'enums',
+        'user_values',
+        'tasks',
+        'site_values',
+        'pages',
+        'user_page',
+        'roles',
+        'role_user',
+        ];
+
+
 	public function run()
 	{
-		Model::unguard();
+		Eloquent::unguard();
 
-                $this->call('ColumnsTableSeeder');
-                $this->call('UsersTableSeeder');
+                $this->cleanDatabase();
+
+                foreach ($this->tables as $seedClass) {
+                    $this->call(ucfirst(camel_case($seedClass)).'TableSeeder');
+                }
 	}
+
+
+        public function cleanDatabase()
+        {
+            DB::statement('SET FOREIGN_KEY_CHECKS=0');
+            foreach ($this->tables as $table) {
+                DB::table($table)->truncate();
+            }
+
+            DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        }
 
 }

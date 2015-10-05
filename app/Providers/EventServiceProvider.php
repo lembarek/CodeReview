@@ -12,9 +12,13 @@ class EventServiceProvider extends ServiceProvider {
 	 */
 	protected $listen = [
 		'event.name' => [
-			'EventListener',
+			'EventListener'
 		],
+                'App\Events\UserHasRegistered' => [
+                    'App\Listeners\UserHasRegistered'
+                ],
 	];
+
 
 	/**
 	 * Register any other events for your application.
@@ -28,5 +32,6 @@ class EventServiceProvider extends ServiceProvider {
 
 		//
 	}
+
 
 }

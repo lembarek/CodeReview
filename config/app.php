@@ -54,6 +54,9 @@ return [
 
 	'locale' => 'en',
 
+
+        'locales' => ['en' => 'english', 'fr' => 'french', 'ar' => 'arab'],
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application Fallback Locale
@@ -135,7 +138,7 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-
+                'Illuminate\Broadcasting\BroadcastServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */
@@ -192,6 +195,17 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+                'Task'      => 'App\Facades\Task',
+                'Condition' => 'App\Facades\Condition',
+                'Action'    => 'App\Facades\Action',
+                'Profile'   => 'App\Facades\Profile',
+                'Page'      => 'App\Facades\Page',
+                'Code'      => 'App\Facades\Code',
+                'User'      => 'App\Facades\User',
+                'Site'      => 'App\Facades\Site',
+                'Role'      => 'App\Facades\Role',
+                'UserMailer'=> 'App\Facades\UserMailer',
 
 	],
 
