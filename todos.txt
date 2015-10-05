@@ -1,7 +1,5 @@
 // the first main purpose is learning the right way to do thing
 
-
-
 when user register raise a event
 when user register, recieve an email
 when page concern a user, he receice an email

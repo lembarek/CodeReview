@@ -92,6 +92,7 @@ class AppServiceProvider extends ServiceProvider {
                     '\Lem\User\User', function($app){
                         return new \Lem\User\User();
                     });
+
                 $this->app->bind(
                     '\Lem\Site\Site', function($app){
                         return new \Lem\Site\Site();
@@ -101,9 +102,6 @@ class AppServiceProvider extends ServiceProvider {
                     '\Lem\Role\Role', function($app){
                         return new \Lem\Role\Role();
                     });
-
-
-
 
 	}
 
